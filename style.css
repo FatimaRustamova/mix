@@ -45,6 +45,8 @@ nav .container .navbar ul li a i {
 }
 nav .container .navbar ul li .dropdown {
   position: absolute;
+  top: 30px;
+  left: 0;
   display: none;
   min-width: 150px;
   z-index: 1;
