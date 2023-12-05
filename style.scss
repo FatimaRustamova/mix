@@ -1,0 +1,527 @@
+@import 'variables';
+@import 'mixin';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    .container{
+        @include container;
+        .navbar{
+            @include flex;
+            ul{
+                display: flex;
+                gap: 25px;
+                li{
+                    list-style-type: none;
+                    font-family: $font-family2;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    position: relative;
+                    transition: all .4s ease;
+                    a{
+                        color: $color2;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        i{
+                            font-size: 10px;
+                            font-weight: bold;
+                        }
+                    }
+                    .dropdown{
+                        position: absolute;
+                        display: none;
+                        min-width: 150px;
+                        z-index: 1;
+                        background-color: $color2;
+                        a{
+                            text-decoration: none;
+                            padding: 17px;
+                            color: $color3;
+                            font-family: $font-family2;
+                            font-size: 11px;
+                            transition: all .4s ease;
+                            &:hover{
+                                color: $color1;
+                            }
+                        }
+                    }
+                    &:hover .dropdown{
+                        display: block;
+                    }
+                }
+            }
+            #i{
+                display: none;
+                font-size: 30px;
+                color: $color2;
+            }
+        }
+    }
+}
+
+// .none{
+//     display: none;
+// }
+
+header{
+    width: 100%;
+    padding: 150px 0;
+    background-image: url('https://preview.colorlib.com/theme/robotics/img/banner-bg.jpg.webp');
+    background-size: cover;
+    background-position: center;
+    .container{
+        @include container;
+        .head{
+            @include flex;
+            .improve{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                h1{
+                    font-family: $font-family3;
+                    font-size: 68px;
+                    color: $color2;
+                    font-weight: 100;
+                }
+                p{
+                    font-family: $font-family2;
+                    color: $color2;
+                    font-size: 14px;
+                }
+                button{
+                    width: 150px;
+                    height: 40px;
+                    background-color: $color2;
+                    border: 1px solid $color2;
+                    font-family: $font-family3;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    transition: all .3s ease;
+                    color: $color3;
+                    &:hover{
+                        background: none;
+                        cursor: pointer;
+                        color: $color2;
+                    }
+                }
+            }
+            .picture{
+                width: 45%;
+                img{
+                    width: 95%;
+                }
+            }
+        }
+    }
+}
+
+.section1{
+    width: 100%;
+    padding: 100px 0;
+    .container{
+        @include container;
+        .robot{
+            width: 100%;
+            @include center;
+            .feature{
+                width: 80%;
+                @include center;
+                flex-direction: column;
+                gap: 10px;
+                h2{
+                    font-family: $font-family2;
+                    font-size: 38px;
+                    color: $color3;
+                    text-align: center;
+                }
+                p{
+                    font-family: $font-family2;
+                    font-size: 15px;
+                    color: $color4;               
+                 }
+            }
+        }
+        .divs{
+            @include flex;
+            margin-top: 80px;
+            .crab{
+                width: 23%;
+                box-shadow: 0px 10px 30px 0px rgba(212, 150, 255, 0.4);
+                cursor: pointer;
+                transition: all .4s ease;
+                .up{
+                    width: 100%;
+                    height: 60%;
+                    @include center;
+                    background-color: $color2;
+                    img{
+                        padding: 30px;
+                    }
+                }
+                .down{
+                    width: 100%;
+                    height: 40%;
+                    background-color: $color5;
+                    @include center;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 30px;
+                    h3{
+                        font-family: $font-family1;
+                        font-size: 20px;
+                        color: $color3;
+                    }
+                    p{
+                        font-family: $font-family2;
+                        font-size: 15px;
+                        color: $color4; 
+                    }
+                    button{
+                        width: 150px;
+                        height: 40px;
+                        background-color: $color2;
+                        border: 1px solid $color2;
+                        font-family: $font-family2;
+                        font-size: 13.5px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: $color3;
+                        transition: all .4s ease;
+                    }
+                }
+                &:hover button{
+                    background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                    border: 1px solid $color1;
+                    color: $color2;
+                }
+            }
+        }
+    }
+}
+
+.section2{
+    width: 100%;
+    padding: 60px 0;
+    .get{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 60px;
+        .photo{
+            width: 50%;
+            @include flex;
+            img{
+                width: 100%;
+            }
+        }
+        .global{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            h2{
+                font-family: $font-family2;
+                color: $color3;
+                font-size: 38px;
+            }
+            #p1{
+                font-family: $font-family2;
+                font-size: 18px;
+                color: $color3;
+            }
+            #p2{
+                font-family: $font-family2;
+                font-size: 15px;
+                color: $color4;
+                line-height: 25px;
+            }
+            button{
+                width: 150px;
+                height: 40px;
+                background-color: $color1;
+                background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                border: 1px solid $color1;
+                font-family: $font-family3;
+                font-size: 15px;
+                text-transform: uppercase;
+                color: $color2;
+                transition: all .3s ease;
+                &:hover{
+                    background: none;
+                    cursor: pointer;
+                    color: $color1;
+                }
+            }
+        }
+    }
+}
+
+.section3{
+    width: 100%;
+    padding: 60px 0;
+    .container{
+        @include container;
+        .life{
+            @include flex;
+            .brand{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                #p3{
+                    font-family: $font-family2;
+                    font-size: 13px;
+                    color: $color1;
+                    letter-spacing: 1px;
+                }
+                h2{
+                    font-family: $font-family2;
+                    color: $color3;
+                    font-size: 38px;
+                }
+                #p4{
+                    font-family: $font-family2;
+                    color: $color3;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                #p5{
+                    font-family: $font-family2;
+                    font-size: 15px;
+                    color: $color4;
+                    line-height: 25px;
+                }
+                button{
+                    width: 200px;
+                    height: 40px;
+                    background-color: $color1;
+                    background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                    border: 1px solid $color1;
+                    font-family: $font-family3;
+                    font-size: 17px;
+                    color: $color2;
+                    transition: all .3s ease;
+                    &:hover{
+                        background: none;
+                        cursor: pointer;
+                        color: $color1;
+                    }
+                }
+            }
+            .video{
+                width: 50%;
+                min-height: 300px;
+                background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                @include center;
+                i{
+                    color: $color2;
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    nav{
+        .container{
+            padding: 0 100px;
+        }
+    }
+    header{
+        padding: 150px 0;
+        .container{
+            padding: 0 100px;
+            .head{
+                .improve{
+                    h1{
+                        font-size: 40px;
+                    }
+                }
+                .picture{
+                    width: 50%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .section1{
+        .container{
+            padding: 0 100px;
+            .robot{
+                .feature{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .section2{
+        .get{
+            .global{
+                width: 45%;
+            }
+        }
+    }
+    .section3{
+        .container{
+            padding: 0 100px;
+        }
+    }
+}
+
+@media screen and (max-width:990px) {
+    nav{
+        .container{
+            padding: 0 140px;
+            .navbar{
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    }
+    header{
+        padding: 220px 0;
+        .container{
+            padding: 0 140px;
+        }
+    }
+    .section1{
+        .container{
+            padding: 0 140px;
+            .divs{
+                flex-wrap: wrap;
+                gap: 25px;
+                .crab{
+                    width: 47%;
+                }
+            }
+        }
+    }
+    .section2{
+        .get{
+            flex-direction: column;
+            .photo{
+                width: 100%;
+            }
+            .global{
+                width: 100%;
+                margin-left: 50px;
+            }
+        }
+    }
+    .section3{
+        .container{
+            padding: 0 140px;
+            .life{
+                flex-direction: column;
+                gap: 30px;
+                .brand{
+                    width: 100%;
+                }
+                .video{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:900px) {
+    nav{
+        .container{
+            padding: 0 120px;
+            .navbar{
+                justify-content: space-between;
+                flex-direction: row;
+                ul{
+                    display: none;
+                }
+                #i{
+                    display: block;
+                }
+            }
+        }
+    }
+    header{
+        .container{
+            padding: 0 120px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    header{
+        padding: 70px 0;
+        .container{
+            .head{
+                flex-direction: column;
+                .improve{
+                    width: 100%;
+                }
+                .picture{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .section1{
+        .container{
+            padding: 0 120px;
+            .robot{
+
+            }
+            .divs{
+                flex-direction: column;
+                .crab{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .section3{
+        .container{
+            padding: 0 120px;
+        }
+    }
+}
+
+
+@media screen and (max-width:576px) {
+    nav{
+        .container{
+            padding: 0 20px;
+        }
+    }
+    header{
+        .container{
+            padding: 0 20px;
+        }
+    }
+    .section1{
+        .container{
+            padding: 0 20px;
+            .robot{
+
+            }
+        }
+    }
+    .section3{
+        .container{
+            padding: 0 20px;
+        }
+    }
+}
